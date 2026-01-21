@@ -1,5 +1,9 @@
 # app.py
 import streamlit as st
+
+st.set_page_config(page_title="🎥 Movie Recommender", layout="wide")
+
+
 import pandas as pd
 import pickle
 from sklearn.metrics.pairwise import cosine_similarity
@@ -39,7 +43,6 @@ def get_recommendations(title, top_n=5):
 # ----------------------------
 # TAMPILAN STREAMLIT
 # ----------------------------
-st.set_page_config(page_title="🎥 Movie Recommender", layout="wide")
 st.title("🎥 Movie Recommender System")
 st.markdown("Rekomendasi film berdasarkan **kemiripan isi (genre + sinopsis)**.")
 
